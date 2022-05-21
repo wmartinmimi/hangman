@@ -3,10 +3,22 @@
 
 ## Description ##
 This is a simple hangman game,
-best for 2 players.
-Feel free to download, use and improve,
-just remember to give credits!
+with online random word generation.
+
+
 Made with python.
+
+## IMPORTANT ##
+*DISCLAMER: I DO NOT OWN THE ONLINE RANDOM WORD GENERATION SERVICE*
+
+
+Homepage of service: [https://random-word-api.herokuapp.com/home](https://random-word-api.herokuapp.com/home)
+
+
+Api of service used: [https://random-word-api.herokuapp.com/word](https://random-word-api.herokuapp.com/word)
+
+
+License of service: [DWTFYW license](https://choosealicense.com/licenses/wtfpl/#)
 
 
 ## Branches ##

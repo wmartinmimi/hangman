@@ -80,9 +80,23 @@ word_list = ['apples', 'bananas', 'oranges']
 
 # word prompt
 print('enter word to be guessed')
+print('empty for online random word')
 word = getpass.getpass('> ')
 if word == '':
-  word = word_list[random.randint(0, len(word_list) - 1)]
+  print('using online service...')
+  print('service at https://random-word-api.herokuapp.com/word')
+  print('released under DWTFYW license')
+  print('homepage for service: https://random-word-api.herokuapp.com/home')
+  print('*DISCAMER: I do not own the service.*')
+  import requests
+  response = requests.get('https://random-word-api.herokuapp.com/word')
+  if response.status_code == 200:
+    word = response.json()[0]
+  else:
+    print('failed to connect to service.')
+    print('using default list')
+    word = word_list[random.randint(0, len(word_list) - 1)]
+
 
 # game setup
 characters = list(word)
