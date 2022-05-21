@@ -6,6 +6,7 @@ This is a simple hangman game,
 best for 2 players.
 Feel free to download, use and improve,
 just remember to give credits!
+Made with python.
 
 
 ## Branches ##
