@@ -102,19 +102,24 @@ while not won and lives > 0:
   print(result)
   print('enter guess')
   guess = input('> ')
-  if guess == '':
+  if len(guess) != 1:
+    print('1 letter guess only!')
+    continue
+  if guess in used or guess in show:
+    print('guessed already!')
     continue
   correct = False
   won = True
   for i in range(len(show)):
-    if guess in characters[i]:
+    if guess.lower() in characters[i].lower():
       correct = True
-      show[i] = guess
+      show[i] = characters[i]
     if show[i] == '_':
       won = False
   if not correct:
     lives -= 1
     used.append(guess)
+    used = sorted(used)
 
 print()
 if won:
